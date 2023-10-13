@@ -1,0 +1,46 @@
+{
+  "products": [
+    {
+      "title": "Mug Coding Fuel",
+      "price": 14.99,
+      "img": "codingfuel",
+      "picked": false,
+      "id": 1
+    },
+    {
+      "title": "Mug CSS",
+      "price": 12.99,
+      "img": "cssmug",
+      "picked": false,
+      "id": 2
+    },
+    {
+      "title": "Mug JS",
+      "price": 13.99,
+      "img": "jsmug",
+      "picked": false,
+      "id": 3
+    },
+    {
+      "title": "Mug React",
+      "price": 14.99,
+      "img": "reactmug",
+      "picked": false,
+      "id": 4
+    },
+    {
+      "title": "Mug Love JS",
+      "price": 13.99,
+      "img": "lovejs",
+      "picked": false,
+      "id": 5
+    },
+    {
+      "title": "Mug Summer JS",
+      "price": 11.99,
+      "img": "jssummer",
+      "picked": false,
+      "id": 6
+    }
+  ]
+}
