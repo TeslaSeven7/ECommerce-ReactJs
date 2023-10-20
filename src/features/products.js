@@ -12,15 +12,21 @@ export const products = createSlice({
 			state.items = action.payload;
 		},
 	},
+	extraReducers: {
+		['cart/createCartItem']: (state, action) => {
+			console.log('yolo');
+			state.items.find((el) => el.id === action.payload.id).picked = true;
+		},
+	},
 });
 
-export function getProductList(action) {
+export function getProductsList(action) {
 	return function (dispatch, getState) {
-		fetch('/data/invetory.json')
+		fetch('/data/inventory.json')
 			.then((response) => response.json())
 			.then((data) => dispatch(addProducts(data.products)));
 	};
 }
 
-export const { addProducts } = products.actions;
+export const { addProducts, togglePick } = products.actions;
 export default products.reducer;
