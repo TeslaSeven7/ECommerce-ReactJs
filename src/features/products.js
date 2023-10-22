@@ -14,8 +14,12 @@ export const products = createSlice({
 	},
 	extraReducers: {
 		['cart/createCartItem']: (state, action) => {
-			console.log('yolo');
+			console.log('Add reducer');
 			state.items.find((el) => el.id === action.payload.id).picked = true;
+		},
+		['cart/deleteCartItem']: (state, action) => {
+			console.log('Delete reducer');
+			state.items.find((el) => el.id === action.payload[0].id).picked = false;
 		},
 	},
 });
