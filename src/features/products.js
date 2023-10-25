@@ -14,12 +14,15 @@ export const products = createSlice({
 	},
 	extraReducers: {
 		['cart/createCartItem']: (state, action) => {
-			console.log('Add reducer');
 			state.items.find((el) => el.id === action.payload.id).picked = true;
 		},
 		['cart/deleteCartItem']: (state, action) => {
-			console.log('Delete reducer');
 			state.items.find((el) => el.id === action.payload[0].id).picked = false;
+		},
+		['cart/changeQuantityCartItem']: (state, action) => {
+			if (action.payload.qt <= 0) {
+				state.items.find((el) => el.id === action.payload.el.id).picked = false;
+			}
 		},
 	},
 });

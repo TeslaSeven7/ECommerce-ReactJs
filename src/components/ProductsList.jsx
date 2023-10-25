@@ -2,9 +2,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProductsList } from '../features/products';
 import { togglePick } from '../features/products';
 import { addOneToCart } from '../features/cart';
+import React, { useEffect } from 'react';
 
 export default function ProductsList() {
 	const products = useSelector((state) => state.products);
+	const cartItems = useSelector((state) => state.cart);
 	const dispatch = useDispatch();
 	if (!products.items) {
 		dispatch(getProductsList());
@@ -12,6 +14,7 @@ export default function ProductsList() {
 	function addCart(el) {
 		dispatch(addOneToCart(el.id));
 	}
+	useEffect(() => {}, [cartItems]);
 	return (
 		<div>
 			<div className='px-6'>
