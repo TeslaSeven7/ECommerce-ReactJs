@@ -21,7 +21,7 @@ function App() {
 								src={shoppingCart}
 								alt=''
 							/>
-							<span>View Your </span>
+							<span>View Your Cart</span>
 						</button>
 					</div>
 
